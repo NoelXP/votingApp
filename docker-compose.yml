@@ -12,6 +12,11 @@ vote:
   links:
     - redis
     
+worker:
+  image: worker-app
+  links:
+    - redis
+    - db
     
 result:
   image: result-app
@@ -20,8 +25,3 @@ result:
   links:
     - db
     
-worker:
-  image: worker-app
-  links:
-    - redis
-    - db
