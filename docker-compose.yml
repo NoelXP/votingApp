@@ -8,7 +8,7 @@ db:
 vote:
   image: voting-app
   ports:
-    - 5000:80
+   - 5000:80
   links:
     - redis
     
@@ -17,8 +17,8 @@ result:
   image: result-app
   ports:
     - 5001:80
-    links:
-      - db
+  links:
+    - db
     
 worker:
   image: worker-app
